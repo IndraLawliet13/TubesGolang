@@ -19,7 +19,7 @@ type transaksi struct {
 	idBarang, jumlahBarang, totalHarga int
 }
 type tabProduk [maxarray]produk
-type i struct {
+type tabTransaksi struct {
 	riwayat [maxarray]transaksi
 	n       int
 }
