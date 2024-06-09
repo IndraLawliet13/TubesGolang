@@ -337,7 +337,7 @@ func searchBarangByName(p tabProduk, nama string, n int) int {
 	return found
 }
 func searchBarangByHarga(p *tabProduk, harga int, n int) int {
-	insertionSortHarga(p, n, "asc")
+	insertionSortHarga(*&p, n, "asc")
 	var min, max, mid, index int
 	min = 0
 	max = n - 1
@@ -418,6 +418,7 @@ func insertionSortNama(p *tabProduk, n int, method string) {
 		p[j+1] = temp
 	}
 }
+
 func selectionSortStok(p *tabProduk, n int, method string) {
 	var m, i, j int
 	if method == "asc" {
